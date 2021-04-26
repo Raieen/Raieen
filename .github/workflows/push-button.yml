@@ -1,0 +1,42 @@
+# This workflow will setup Python 3.9, run push_button.py then push the updated txt files
+
+name: Press Button!
+
+on:
+  issues:
+    types: [opened]
+
+jobs:
+  press-button:
+    runs-on: ubuntu-latest
+    if: github.event.issue.title == 'button'
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set up Python 3.9
+      uses: actions/setup-python@v2
+      with:
+        python-version: 3.9
+    - name: Run push_button.py
+      run: cd button && python push_button.py $GITHUB_ACTOR
+    - name: Commit files
+      uses: EndBug/add-and-commit@v4.2.1
+      with:
+        add: "."
+        author_email: email@email.com
+        author_name: Button
+        message: "@${{ github.actor }} pushed the button!"
+    - name: Update Issue
+      run: |
+        curl \
+        -X POST \
+        -H 'Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}' \
+        -H "Accept: application/vnd.github.v3+json" \
+        https://api.github.com/repos/${{ github.repository }}/issues/${{ github.event.issue.number }}/comments \
+        -d '{"body":"![Pressed button image](https://raw.githubusercontent.com/Raieen/Raieen/main/button/images/pressed.jpg)\n@${{ github.actor }}, you have pressed the button. See your score at https://github.com/Raieen"}' \
+        && \
+        curl \
+        -X PATCH \
+        -H 'Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}' \
+        -H "Accept: application/vnd.github.v3+json" \
+        https://api.github.com/repos/${{ github.repository }}/issues/${{ github.event.issue.number }} \
+        -d '{"state":"closed"}'

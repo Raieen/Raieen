@@ -18,11 +18,11 @@ Since you're here, would you like to press *The Button*?
 
 #### 📅 Recently pushed the button:
 
-*No one yet! Be the first to push The Button*
+$TEMPLATE_RECENT
 
 #### 🏆 Leaderboard:
 
-*No one yet! Be the first to push The Button*
+$TEMPLATE_LEADERBOARD
 
 <br>
 
