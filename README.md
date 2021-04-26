@@ -18,12 +18,11 @@ Since you're here, would you like to press *The Button*?
 
 #### 📅 Recently pushed the button:
 
-🟩 (0) @Raieen
+*No one yet! Be the first to push The Button*
 
 #### 🏆 Leaderboard:
 
-1. 🟩 (0) @Raieen
-
+*No one yet! Be the first to push The Button*
 
 <br>
 
