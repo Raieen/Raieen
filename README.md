@@ -18,11 +18,11 @@ Since you're here, would you like to press *The Button*?
 
 #### 📅 Recently pushed the button:
 
-🟥 (294) @000red1, 🟥 (109) @Sizbei, 🟩 (3) @yifeiyin, 🟩 (0) @TerryCLAWong
+🟥 (133) @000red1, 🟥 (294) @000red1, 🟥 (109) @Sizbei, 🟩 (3) @yifeiyin, 🟩 (0) @TerryCLAWong
 
 #### 🏆 Leaderboard:
 
-1. 🟥 (294) @000red1
+1. 🟥 (427) @000red1
 1. 🟥 (109) @Sizbei
 1. 🟩 (3) @yifeiyin
 1. 🟩 (0) @TerryCLAWong
